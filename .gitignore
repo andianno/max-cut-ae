@@ -1,1 +1,21 @@
+# 1. File compilati (La "torta sfornata")
+# Ignoriamo tutti i file oggetto e gli eseguibili
+*.o
+run_nphard
+run_experiments
+
+# 2. Dataset pesanti (Il "supermercato")
+# Ignoriamo i file di testo dentro data, ma manteniamo la cartella
+data/*.txt
+data/*.gz
+
+# 3. Risultati generati (Possiamo ricrearli quando vogliamo)
+results/
+
+# 4. Ambiente Virtuale Python
 .venv/
+__pycache__/
+*.pyc
+
+# 5. File di sistema (Spazzatura del sistema operativo)
+.DS_Store

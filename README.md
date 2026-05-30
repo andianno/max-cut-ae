@@ -6,23 +6,30 @@
 ## 📌 Abstract
 Questo progetto implementa e valuta sperimentalmente algoritmi di approssimazione per il problema **Maximum Cut (Max-Cut)** su grafi di grandi dimensioni. Il focus dell'esperimento è l'analisi dei *runtime trade-offs* (Qualità della soluzione vs CPU Time) mettendo a confronto un algoritmo basato su partizionamento casuale (Randomized Max-Cut) con un'euristica deterministica (Greedy Local Search). 
 
-Il progetto segue le metodologie di Algorithm Engineering, includendo *Doubling Experiments* su generatori random, validazione su reti reali (SNAP), tuning del compilatore e misurazione rigorosa del CPU Time per isolare gli artefatti sperimentali.
+Il progetto segue le metodologie di Algorithm Engineering, includendo l'uso di dataset reali (reti SNAP), una rigorosa misurazione del CPU Time per isolare le prestazioni del codice, e una dimostrazione empirica dell'esplosione combinatoria (NP-Hardness) tramite il confronto con un Algoritmo Esatto su grafi di taglia ridotta.
 
 ---
 
-## 📂 Struttura della Repository
+## 📂 Struttura della Repository (Architettura Modulare)
 
-Il progetto è strutturato per separare nettamente il motore di calcolo (C++ Workhorse) dall'analisi dei dati (Python):
+Il progetto è stato riorganizzato seguendo il principio di separazione delle responsabilità, isolando le interfacce, i motori di calcolo e gli esperimenti:
 
 ```text
 max-cut-ae/
+├── include/
+│   └── graph.h              # "Contratto": definizioni del grafo e firme delle funzioni
 ├── src/
-│   └── maxcut.cpp           # Implementazione C++ degli algoritmi e misurazione CPU Time
+│   ├── utils.cpp            # Parser dei file SNAP e funzioni di supporto (es. calculate_cut)
+│   ├── randomized.cpp       # Euristica Random (Costo: lineare)
+│   ├── greedy.cpp           # Euristica Greedy Local Search (Costo: dipendente dalla soluzione)
+│   ├── exact.cpp            # Algoritmo Esatto Brute Force (Costo: esponenziale)
+│   ├── main_nphard.cpp      # Eseguibile 1: Test del muro esponenziale su grafi piccoli
+│   └── main_exp.cpp         # Eseguibile 2: Test su reti reali e Doubling Experiment
 ├── scripts/
-│   └── plot_results.py      # Script Python per la generazione dei grafici
-├── data/                    # Dataset (ignorati da git, vedi istruzioni sotto)
-│   └── toy_graph.txt        # Piccolo grafo di test per la validazione (Correctness)
-├── results/                 # File CSV generati dal C++ e grafici PNG
-├── Makefile                 # Regole di compilazione con ottimizzazione -O3
-├── run_experiments.sh       # Pipeline automatizzata per test e plot
+│   ├── plot_results.py      # Script Python per i grafici del Doubling Experiment
+│   └── plot_nphard.py       # Script Python per i grafici dell'algoritmo Esatto
+├── data/                    # Dataset (ignorati da Git. Si consiglia di usare le reti di Stanford SNAP)
+├── results/                 # File CSV e grafici PNG autogenerati
+├── Makefile                 # Regole per la compilazione intelligente a oggetti separati (.o)
+├── .gitignore               # Regole di pulizia della repository (ignora eseguibili e dataset)
 └── README.md
