@@ -27,11 +27,15 @@ void exact_max_cut_recursive(const Graph& G, int u, vector<bool>& in_A, int& bes
 // 3. IL COMPETITOR ESATTO: Il "Muro" Brute Force
 int exact_max_cut(const Graph& G) {
     int n = G.size();
+    if (n == 0) return 0; // Protezione contro grafi vuoti
     vector<bool> in_A(n, false); // Vettore di partenza tutto a false
     int best_cut = 0;
+
+    // OTTIMIZZAZIONE SIMMETRIA: Fissiamo il nodo 0 nel gruppo A (true)
+    in_A[0] = true;
     
     // Faccio partire la ricorsione dal nodo 0
-    exact_max_cut_recursive(G, 0, in_A, best_cut);
+    exact_max_cut_recursive(G, 1, in_A, best_cut);
     
     return best_cut;
 }

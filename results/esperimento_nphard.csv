@@ -1,96 +1,106 @@
 N_Nodi,Algo,Taglio,CPU_Time_sec
-10,Random,8,1.4e-05
-10,LocalSearch,18,1.8e-05
-10,Exact,18,0.000231
-10,Random 100 iterations,18,5.8e-05
-10,LocalSearch 100 iterations,18,0.000246
-11,Random,6,1.3e-05
-11,LocalSearch,13,1.4e-05
-11,Exact,15,0.000377
-11,Random 100 iterations,13,5.8e-05
-11,LocalSearch 100 iterations,15,0.000188
-12,Random,12,1.3e-05
-12,LocalSearch,21,3e-05
-12,Exact,22,0.00099
-12,Random 100 iterations,21,6.7e-05
-12,LocalSearch 100 iterations,22,0.000267
-13,Random,18,1.3e-05
-13,LocalSearch,29,1.6e-05
-13,Exact,29,0.002375
-13,Random 100 iterations,26,7.5e-05
-13,LocalSearch 100 iterations,29,0.000418
-14,Random,28,1.5e-05
-14,LocalSearch,32,1.7e-05
-14,Exact,33,0.005348
-14,Random 100 iterations,29,8.9e-05
-14,LocalSearch 100 iterations,33,0.000466
-15,Random,26,1.4e-05
-15,LocalSearch,34,1.9e-05
-15,Exact,35,0.009069
-15,Random 100 iterations,31,6.7e-05
-15,LocalSearch 100 iterations,35,0.000254
-16,Random,29,1.1e-05
-16,LocalSearch,37,1.4e-05
-16,Exact,42,0.014177
-16,Random 100 iterations,35,6.1e-05
-16,LocalSearch 100 iterations,42,0.000302
-17,Random,27,1.1e-05
-17,LocalSearch,49,1.2e-05
-17,Exact,49,0.031899
-17,Random 100 iterations,44,5.7e-05
-17,LocalSearch 100 iterations,49,0.000326
-18,Random,24,5e-06
-18,LocalSearch,51,1.4e-05
-18,Exact,52,0.061354
-18,Random 100 iterations,47,5.7e-05
-18,LocalSearch 100 iterations,52,0.000378
-19,Random,46,1e-05
-19,LocalSearch,61,1.4e-05
-19,Exact,64,0.141075
-19,Random 100 iterations,61,5.9e-05
-19,LocalSearch 100 iterations,64,0.00039
-20,Random,46,1e-05
-20,LocalSearch,59,1.4e-05
-20,Exact,62,0.263505
-20,Random 100 iterations,59,5.9e-05
-20,LocalSearch 100 iterations,61,0.000393
-21,Random,47,1e-05
-21,LocalSearch,67,1.2e-05
-21,Exact,69,0.646085
-21,Random 100 iterations,61,6.5e-05
-21,LocalSearch 100 iterations,69,0.00045
-22,Random,60,1e-05
-22,LocalSearch,73,1.3e-05
-22,Exact,78,1.35499
-22,Random 100 iterations,69,6.9e-05
-22,LocalSearch 100 iterations,78,0.000519
-23,Random,68,9e-06
-23,LocalSearch,83,1.3e-05
-23,Exact,87,3.04156
-23,Random 100 iterations,81,7.7e-05
-23,LocalSearch 100 iterations,87,0.000524
-24,Random,76,1e-05
-24,LocalSearch,91,1.7e-05
-24,Exact,92,6.20555
+10,Random,10,1.5e-05
+10,LocalSearch,15,1.9e-05
+10,Exact,15,0.000139
+10,Random 100 iterations,14,8e-05
+10,LocalSearch 100 iterations,15,0.00027
+11,Random,16,1.5e-05
+11,LocalSearch,20,1.7e-05
+11,Exact,23,0.000352
+11,Random 100 iterations,23,8.5e-05
+11,LocalSearch 100 iterations,23,0.000371
+12,Random,12,1.5e-05
+12,LocalSearch,18,1.7e-05
+12,Exact,19,0.000614
+12,Random 100 iterations,18,9.6e-05
+12,LocalSearch 100 iterations,19,0.000322
+13,Random,22,1.5e-05
+13,LocalSearch,25,1.9e-05
+13,Exact,26,0.001951
+13,Random 100 iterations,23,0.00013
+13,LocalSearch 100 iterations,26,0.000582
+14,Random,17,1.7e-05
+14,LocalSearch,30,2.5e-05
+14,Exact,31,0.001872
+14,Random 100 iterations,28,4.7e-05
+14,LocalSearch 100 iterations,31,0.00021
+15,Random,22,1e-05
+15,LocalSearch,32,1.1e-05
+15,Exact,33,0.003009
+15,Random 100 iterations,30,5.2e-05
+15,LocalSearch 100 iterations,33,0.000221
+16,Random,39,1e-05
+16,LocalSearch,44,1.2e-05
+16,Exact,46,0.007237
+16,Random 100 iterations,43,5.3e-05
+16,LocalSearch 100 iterations,46,0.000316
+17,Random,34,1e-05
+17,LocalSearch,44,1.3e-05
+17,Exact,46,0.013268
+17,Random 100 iterations,40,5.1e-05
+17,LocalSearch 100 iterations,46,0.00028
+18,Random,38,1e-05
+18,LocalSearch,55,1.3e-05
+18,Exact,55,0.029777
+18,Random 100 iterations,49,5.4e-05
+18,LocalSearch 100 iterations,55,0.000314
+19,Random,54,1e-05
+19,LocalSearch,60,1.2e-05
+19,Exact,65,0.073894
+19,Random 100 iterations,57,6e-05
+19,LocalSearch 100 iterations,65,0.00041
+20,Random,42,8e-06
+20,LocalSearch,63,1.5e-05
+20,Exact,63,0.142097
+20,Random 100 iterations,55,6.3e-05
+20,LocalSearch 100 iterations,63,0.000369
+21,Random,50,1e-05
+21,LocalSearch,66,1.3e-05
+21,Exact,74,0.329771
+21,Random 100 iterations,66,6.5e-05
+21,LocalSearch 100 iterations,74,0.000455
+22,Random,54,1e-05
+22,LocalSearch,77,1.4e-05
+22,Exact,81,0.687689
+22,Random 100 iterations,70,7e-05
+22,LocalSearch 100 iterations,81,0.000509
+23,Random,70,1.1e-05
+23,LocalSearch,89,1.8e-05
+23,Exact,89,1.47739
+23,Random 100 iterations,77,9.2e-05
+23,LocalSearch 100 iterations,89,0.000556
+24,Random,71,1e-05
+24,LocalSearch,89,1.5e-05
+24,Exact,92,3.21868
 24,Random 100 iterations,81,7.5e-05
-24,LocalSearch 100 iterations,92,0.000565
+24,LocalSearch 100 iterations,92,0.000571
 25,Random,71,1e-05
-25,LocalSearch,99,1.9e-05
-25,Exact,101,13.5966
-25,Random 100 iterations,91,8e-05
-25,LocalSearch 100 iterations,101,0.000683
-26,Random,81,9e-06
-26,LocalSearch,107,1.6e-05
-26,Exact,108,27.8315
-26,Random 100 iterations,96,8.1e-05
-26,LocalSearch 100 iterations,108,0.000738
-27,Random,95,1e-05
-27,LocalSearch,113,1.6e-05
-27,Exact,119,63.3897
-27,Random 100 iterations,109,9.2e-05
-27,LocalSearch 100 iterations,119,0.000863
-28,Random,99,1e-05
-28,LocalSearch,118,1.7e-05
-28,Exact,121,130.828
-28,Random 100 iterations,110,9.4e-05
-28,LocalSearch 100 iterations,121,0.000818
+25,LocalSearch,98,1.7e-05
+25,Exact,98,6.66736
+25,Random 100 iterations,92,8.4e-05
+25,LocalSearch 100 iterations,98,0.000631
+26,Random,77,1e-05
+26,LocalSearch,106,1.8e-05
+26,Exact,106,14.7775
+26,Random 100 iterations,92,8.7e-05
+26,LocalSearch 100 iterations,106,0.000756
+27,Random,92,1.2e-05
+27,LocalSearch,112,2.1e-05
+27,Exact,120,33.4842
+27,Random 100 iterations,105,0.000116
+27,LocalSearch 100 iterations,120,0.000829
+28,Random,99,1.1e-05
+28,LocalSearch,120,2e-05
+28,Exact,125,68.1307
+28,Random 100 iterations,113,8.9e-05
+28,LocalSearch 100 iterations,125,0.000813
+29,Random,101,1e-05
+29,LocalSearch,125,1.4e-05
+29,Exact,131,148.454
+29,Random 100 iterations,116,9.4e-05
+29,LocalSearch 100 iterations,131,0.000878
+30,Random,107,1e-05
+30,LocalSearch,130,2.1e-05
+30,Exact,134,299.77
+30,Random 100 iterations,121,0.000109
+30,LocalSearch 100 iterations,134,0.001009

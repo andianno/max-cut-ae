@@ -10,7 +10,7 @@ int main() {
 
     // ATTENZIONE: Dimensioni piccolissime per l'Algoritmo Esatto
     // Già a 30 nodi potrebbe metterci diversi secondi o minuti.
-    vector<int> sizes = {10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28}; 
+    vector<int> sizes = {10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30}; 
     double density = 0.5; // Grafo molto denso per metterlo sotto stress
     int iterazioni = 100; //appositamente basso per vedere la qualità del taglio anche con poche iterazioni
     int baseline_iter = 1;// Iterazioni per Randomized e Local Search (basso per vedere la qualità del taglio anche con poche iterazioni) 
