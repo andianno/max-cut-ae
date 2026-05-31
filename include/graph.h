@@ -14,7 +14,7 @@ Graph read_graph_from_file(const std::string& filename);
 
 // --- Algoritmi (staranno nei rispettivi .cpp) ---
 int randomized_max_cut(const Graph& G, int iterations);
-int local_search_max_cut(const Graph& G);
+int local_search_max_cut(const Graph& G, int iterations);
 int exact_max_cut(const Graph& G);
 
 #endif
