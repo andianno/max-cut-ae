@@ -10,7 +10,7 @@ run_experiments
 # data/*.gz
 
 # 3. Risultati generati (Possiamo ricrearli quando vogliamo)
-# results/
+results/
 
 # 4. Ambiente Virtuale Python
 .venv/
