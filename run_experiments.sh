@@ -1,17 +1,62 @@
 #!/bin/bash
 
-# Interrompe lo script se c'è un errore
+# Ferma lo script se qualcosa va storto
 set -e 
 
-echo "🛠️ 1. Compilazione del Workhorse C++..."
+echo "========================================================="
+echo "🚀 AVVIO REPLICAZIONE TOTALE DELL'ESPERIMENTO MAX-CUT"
+echo "========================================================="
+
+echo ""
+echo "🐍 1. Creazione ambiente virtuale e installazione librerie..."
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+
+echo ""
+echo "🛠️ 2. Compilazione del codice sorgente C++..."
+make clean
 make
 
-echo "🏃 2. Esecuzione del Doubling Experiment..."
-./maxcut > results/esperimento_doubling.csv
+echo ""
+echo "🏃 3. Esecuzione algoritmo Esatto (NP-Hardness)..."
+./run_nphard
 
-echo "📊 3. Generazione dei grafici in Python..."
-# Attiva il venv e lancia lo script
-source .venv/bin/activate
-python3 scripts/plot_results.py
+echo ""
+echo "🏃 4. Esecuzione Esperimenti Standard (Early Stopping)..."
+echo "   -> Facebook..."
+./run_experiments facebook
+echo "   -> Amazon..."
+./run_experiments amazon
+echo "   -> YouTube..."
+./run_experiments youtube
 
-echo "✅ Pipeline completata! Controlla la cartella results/"
+echo ""
+echo "🏃 5. Esecuzione Doubling Experiment (Incremento Logaritmico)..."
+echo "   -> Facebook..."
+./run_experiments_d facebook
+echo "   -> Amazon..."
+./run_experiments_d amazon
+echo "   -> YouTube..."
+./run_experiments_d youtube
+
+echo ""
+echo "📊 6. Generazione di tutti i grafici Python..."
+echo "   -> Grafici NP-Hardness..."
+python3 scripts/plot_nphard.py
+
+echo "   -> Grafici Esperimenti Standard..."
+python3 scripts/plot_exp.py facebook
+python3 scripts/plot_exp.py amazon
+python3 scripts/plot_exp.py youtube
+
+echo "   -> Grafici Doubling Experiment..."
+python3 scripts/plot_doubling.py facebook
+python3 scripts/plot_doubling.py amazon
+python3 scripts/plot_doubling.py youtube
+
+echo ""
+echo "========================================================="
+echo "✅ ESPERIMENTO REPLICATO AL 100%!"
+echo "Tutti i file CSV e i grafici PNG sono pronti."
+echo "========================================================="

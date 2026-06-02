@@ -2,21 +2,25 @@
 CXX = g++
 CXXFLAGS = -O3 -std=c++11 -Wall
 
-# I nomi dei due programmi finali che vogliamo creare
-TARGETS = run_nphard run_experiments
+# I nomi dei programmi finali che vogliamo creare (aggiunto run_experiments_d)
+TARGETS = run_nphard run_experiments run_experiments_d
 
-# I "pezzi di motore" condivisi da entrambi i programmi
+# I "pezzi di motore" condivisi da tutti i programmi
 OBJS = src/utils.o src/randomized.o src/greedy.o src/exact.o
 
-# Regola principale: quando scrivi "make", compila entrambi i target
+# Regola principale: quando scrivi "make", compila tutti i target
 all: $(TARGETS)
 
 # 1. Come costruire l'esperimento sui grafi piccoli (NP-Hardness)
 run_nphard: src/main_nphard.o $(OBJS)
 	$(CXX) $(CXXFLAGS) -o $@ $^
 
-# 2. Come costruire l'esperimento principale (Doubling/Big Data)
+# 2. Come costruire l'esperimento principale (Big Data)
 run_experiments: src/main_exp.o $(OBJS)
+	$(CXX) $(CXXFLAGS) -o $@ $^
+
+# 3. Come costruire l'esperimento con step logaritmici (Doubling)
+run_experiments_d: src/main_exp_d.o $(OBJS)
 	$(CXX) $(CXXFLAGS) -o $@ $^
 
 # Regola magica: insegna al Makefile come trasformare QUALSIASI .cpp in un .o
