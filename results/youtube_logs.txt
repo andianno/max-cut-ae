@@ -1,0 +1,54 @@
+=== Avvio Esperimento Max-Cut sui Dataset ===
+Inizio testing iterativo su youtube...
+
+Iter: 1 | Taglio Greedy: 2332555 | T_Greedy: 1.21126 s | Pazienza: 5
+Iter: 2 | Taglio Greedy: 2336477 | T_Greedy: 2.26765 s | Pazienza: 5
+Iter: 3 | Taglio Greedy: 2340626 | T_Greedy: 3.39619 s | Pazienza: 5
+Iter: 4 | Taglio Greedy: 2323090 | T_Greedy: 6.36899 s | Pazienza: 5
+Iter: 5 | Taglio Greedy: 2361232 | T_Greedy: 6.44239 s | Pazienza: 4
+Iter: 6 | Taglio Greedy: 2330083 | T_Greedy: 7.29988 s | Pazienza: 5
+Iter: 7 | Taglio Greedy: 2343187 | T_Greedy: 7.6601 s | Pazienza: 4
+Iter: 8 | Taglio Greedy: 2346567 | T_Greedy: 8.69847 s | Pazienza: 3
+Iter: 9 | Taglio Greedy: 2343635 | T_Greedy: 9.83941 s | Pazienza: 2
+Iter: 10 | Taglio Greedy: 2356787 | T_Greedy: 11.4876 s | Pazienza: 1
+Iter: 11 | Taglio Greedy: 2352366 | T_Greedy: 12.4516 s | Pazienza: 0
+Iter: 12 | Taglio Greedy: 2356183 | T_Greedy: 14.5673 s | Pazienza: -1
+Iter: 13 | Taglio Greedy: 2356590 | T_Greedy: 15.2252 s | Pazienza: -2
+Iter: 14 | Taglio Greedy: 2359208 | T_Greedy: 16.4043 s | Pazienza: -3
+Iter: 15 | Taglio Greedy: 2378636 | T_Greedy: 17.154 s | Pazienza: -4
+Iter: 16 | Taglio Greedy: 2336736 | T_Greedy: 22.6325 s | Pazienza: 5
+Iter: 17 | Taglio Greedy: 2369763 | T_Greedy: 20.5647 s | Pazienza: 4
+Iter: 18 | Taglio Greedy: 2376543 | T_Greedy: 21.7084 s | Pazienza: 3
+Iter: 19 | Taglio Greedy: 2345306 | T_Greedy: 25.673 s | Pazienza: 2
+Iter: 20 | Taglio Greedy: 2369434 | T_Greedy: 22.3917 s | Pazienza: 1
+Iter: 21 | Taglio Greedy: 2366280 | T_Greedy: 23.8007 s | Pazienza: 0
+Iter: 22 | Taglio Greedy: 2359924 | T_Greedy: 27.621 s | Pazienza: -1
+Iter: 23 | Taglio Greedy: 2340700 | T_Greedy: 31.0971 s | Pazienza: -2
+Iter: 24 | Taglio Greedy: 2339127 | T_Greedy: 28.2875 s | Pazienza: -3
+Iter: 25 | Taglio Greedy: 2370254 | T_Greedy: 30.5617 s | Pazienza: -4
+Iter: 26 | Taglio Greedy: 2370096 | T_Greedy: 30.7844 s | Pazienza: -5
+Iter: 27 | Taglio Greedy: 2339788 | T_Greedy: 33.9847 s | Pazienza: -6
+Iter: 28 | Taglio Greedy: 2362759 | T_Greedy: 30.4648 s | Pazienza: -7
+Iter: 29 | Taglio Greedy: 2348911 | T_Greedy: 32.2383 s | Pazienza: -8
+Iter: 30 | Taglio Greedy: 2361956 | T_Greedy: 34.4427 s | Pazienza: -9
+Iter: 31 | Taglio Greedy: 2381253 | T_Greedy: 37.7331 s | Pazienza: -10
+Iter: 32 | Taglio Greedy: 2344852 | T_Greedy: 40.7582 s | Pazienza: 5
+Iter: 33 | Taglio Greedy: 2354611 | T_Greedy: 38.4237 s | Pazienza: 4
+Iter: 34 | Taglio Greedy: 2369187 | T_Greedy: 37.896 s | Pazienza: 3
+Iter: 35 | Taglio Greedy: 2359284 | T_Greedy: 42.9245 s | Pazienza: 2
+Iter: 36 | Taglio Greedy: 2367089 | T_Greedy: 39.5495 s | Pazienza: 1
+Iter: 37 | Taglio Greedy: 2341539 | T_Greedy: 47.5873 s | Pazienza: 0
+Iter: 38 | Taglio Greedy: 2358949 | T_Greedy: 41.8167 s | Pazienza: -1
+Iter: 39 | Taglio Greedy: 2374220 | T_Greedy: 49.3427 s | Pazienza: -2
+Iter: 40 | Taglio Greedy: 2377048 | T_Greedy: 49.9302 s | Pazienza: -3
+Iter: 41 | Taglio Greedy: 2374507 | T_Greedy: 47.7648 s | Pazienza: -4
+Iter: 42 | Taglio Greedy: 2349702 | T_Greedy: 51.3235 s | Pazienza: -5
+Iter: 43 | Taglio Greedy: 2351803 | T_Greedy: 58.261 s | Pazienza: -6
+Iter: 44 | Taglio Greedy: 2367854 | T_Greedy: 55.6584 s | Pazienza: -7
+Iter: 45 | Taglio Greedy: 2361975 | T_Greedy: 54.4261 s | Pazienza: -8
+Iter: 46 | Taglio Greedy: 2348515 | T_Greedy: 58.3092 s | Pazienza: -9
+Iter: 47 | Taglio Greedy: 2369212 | T_Greedy: 53.3093 s | Pazienza: -10
+Iter: 48 | Taglio Greedy: 2360932 | T_Greedy: 60.8382 s | Pazienza: -11
+Iter: 49 | Taglio Greedy: 2358997 | T_Greedy: 56.7494 s | Pazienza: -12
+
+Esperimento concluso! Dati salvati in: results/youtube.csv
