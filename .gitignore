@@ -4,6 +4,7 @@
 run_nphard
 run_experiments
 run_experiments_d
+test_generators
 
 # 2. Dataset pesanti (Il "supermercato")
 # Ignoriamo i file di testo dentro data, ma manteniamo la cartella
@@ -11,7 +12,7 @@ run_experiments_d
 # data/*.gz
 
 # 3. Risultati generati (Possiamo ricrearli quando vogliamo)
-results/
+# results/
 
 # 4. Ambiente Virtuale Python
 .venv/

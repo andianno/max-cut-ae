@@ -19,11 +19,15 @@ make clean
 make
 
 echo ""
-echo "🏃 3. Esecuzione algoritmo Esatto (NP-Hardness)..."
+echo "🔍 3. Validazione statistica e strutturale dei generatori..."
+./test_generators
+
+echo ""
+echo "🏃 4. Esecuzione algoritmo Esatto (NP-Hardness)..."
 ./run_nphard
 
 echo ""
-echo "🏃 4. Esecuzione Esperimenti Standard (Early Stopping)..."
+echo "🏃 5. Esecuzione Esperimenti Standard (Early Stopping)..."
 echo "   -> Facebook..."
 ./run_experiments facebook
 echo "   -> Amazon..."
@@ -32,7 +36,7 @@ echo "   -> YouTube..."
 ./run_experiments youtube
 
 echo ""
-echo "🏃 5. Esecuzione Doubling Experiment (Incremento Logaritmico)..."
+echo "🏃 6. Esecuzione Doubling Experiment (Incremento Logaritmico)..."
 echo "   -> Facebook..."
 ./run_experiments_d facebook
 echo "   -> Amazon..."
@@ -41,7 +45,12 @@ echo "   -> YouTube..."
 ./run_experiments_d youtube
 
 echo ""
-echo "📊 6. Generazione di tutti i grafici Python..."
+echo "📊 7. Generazione di tutti i grafici Python..."
+echo "   -> Grafico Validazione Barabási-Albert..."
+cd scripts
+python3 plot_ba.py
+cd ..
+
 echo "   -> Grafici NP-Hardness..."
 python3 scripts/plot_nphard.py
 

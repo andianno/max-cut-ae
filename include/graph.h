@@ -11,6 +11,7 @@ typedef std::vector<std::vector<int>> Graph;
 int calculate_cut(const Graph& G, const std::vector<bool>& in_A);
 Graph generate_random_graph(int n, double p);
 Graph read_graph_from_file(const std::string& filename);
+Graph generate_barabasi_albert_graph(int n, int m0, int m);
 
 // --- Algoritmi (staranno nei rispettivi .cpp) ---
 int randomized_max_cut(const Graph& G, int iterations);

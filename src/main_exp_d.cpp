@@ -54,7 +54,7 @@ int main(int argc, char *argv[])
     out_file << "Iterazioni,Algoritmo,Taglio,CPU_Time\n";
 
     // 3. LOGICA DI EARLY STOPPING (PAZIENZA)
-    int iterations = ;
+    int iterations = 1024; // Numero massimo di iterazioni (doppia fino a 1024)
     int current_iterations = 1;
     int best_greedy_overall = 0;
 
