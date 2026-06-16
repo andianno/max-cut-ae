@@ -24,7 +24,7 @@ echo "🔍 3. Validazione statistica e strutturale dei generatori..."
 
 echo ""
 echo "🏃 4. Esecuzione algoritmo Esatto (NP-Hardness)..."
-./run_nphard
+./run_nphard > results/esperimento_nphard.csv
 
 echo ""
 echo "🏃 5. Esecuzione Esperimenti Standard (Early Stopping)..."

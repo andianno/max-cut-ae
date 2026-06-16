@@ -5,6 +5,7 @@ run_nphard
 run_experiments
 run_experiments_d
 test_generators
+run_scale
 
 # 2. Dataset pesanti (Il "supermercato")
 # Ignoriamo i file di testo dentro data, ma manteniamo la cartella
