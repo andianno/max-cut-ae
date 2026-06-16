@@ -4,6 +4,15 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+def format_title_name(name):
+    """Formatta il nome del dataset per renderlo presentabile nei titoli dei grafici."""
+    if name.startswith("er_"):
+        return f"Erdős-Rényi (Specchiato su {name[3:].capitalize()})"
+    elif name.startswith("ba_"):
+        return f"Barabási-Albert (Specchiato su {name[3:].capitalize()})"
+    else:
+        return name.capitalize()
+
 def main():
     # 1. PARSING DELL'ARGOMENTO
     dataset_name = "facebook"
@@ -29,7 +38,10 @@ def main():
     palette = {"Random": "#6495ED", "Greedy": "#8B0000"} 
     
     fig, axes = plt.subplots(3, 2, figsize=(16, 18))
-    fig.suptitle(f"Analisi Prestazionale e Trend Line - Dataset: {dataset_name.capitalize()}", 
+    
+    # Usa la nuova funzione per un titolo accademico pulito
+    display_name = format_title_name(dataset_name)
+    fig.suptitle(f"Analisi Prestazionale e Trend Line - Rete: {display_name}", 
                  fontsize=20, weight='bold')
 
     # --- RIGA 1: CONFRONTO GLOBALE (Senza regressione, per purezza visiva) ---

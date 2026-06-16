@@ -2,10 +2,10 @@
 CXX = g++
 CXXFLAGS = -O3 -std=c++11 -Wall
 
-# I nomi dei programmi finali che vogliamo creare (aggiunto test_generators)
-TARGETS = run_nphard run_experiments run_experiments_d test_generators
+# I nomi dei programmi finali che vogliamo creare (aggiunto run_scale)
+TARGETS = run_nphard run_experiments run_experiments_d test_generators run_scale
 
-# I "pezzi di motore" condivisi da tutti i programmi
+# I "pezzi condivisi" da tutti i programmi
 OBJS = src/utils.o src/randomized.o src/greedy.o src/exact.o
 
 # Regola principale: quando scrivi "make", compila tutti i target
@@ -19,12 +19,16 @@ run_nphard: src/main_nphard.o $(OBJS)
 run_experiments: src/main_exp.o $(OBJS)
 	$(CXX) $(CXXFLAGS) -o $@ $^
 
-# 3. Come costruire l'esperimento con step logaritmici (Doubling)
+# 3. Come costruire l'esperimento con step logaritmici (Doubling Iterazioni)
 run_experiments_d: src/main_exp_d.o $(OBJS)
 	$(CXX) $(CXXFLAGS) -o $@ $^
 
 # 4. Come costruire i test dei generatori di grafi
 test_generators: src/test_generators.o $(OBJS)
+	$(CXX) $(CXXFLAGS) -o $@ $^
+
+# 5. Come costruire l'esperimento di scalabilità (Doubling Nodi)
+run_scale: src/main_scale.o $(OBJS)
 	$(CXX) $(CXXFLAGS) -o $@ $^
 
 # Regola magica: insegna al Makefile come trasformare QUALSIASI .cpp in un .o
