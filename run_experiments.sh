@@ -20,7 +20,7 @@ make
 
 echo ""
 echo "🔍 3. Validazione statistica e strutturale dei generatori..."
-./test_generators
+./test_generators > results/validazione_generatori.csv
 
 echo ""
 echo "🏃 4. Esecuzione algoritmo Esatto (NP-Hardness)..."
