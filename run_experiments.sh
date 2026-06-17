@@ -28,7 +28,7 @@ echo "🏃 4. Esecuzione algoritmo Esatto (NP-Hardness)..."
 
 echo ""
 echo "🏃 5. Esecuzione Esperimenti Standard (Early Stopping)..."
-for data in facebook enron amazon youtube er_facebook er_enron er_amazon er_youtube ba_facebook ba_enron ba_amazon ba_youtube
+for data in facebook enron amazon youtube er_facebook ba_facebook ba_enron ba_amazon ba_youtube
 do
     echo "   -> Esecuzione su $data..."
     ./run_experiments $data
@@ -36,7 +36,7 @@ done
 
 echo ""
 echo "🏃 6. Esecuzione Doubling Experiment (Incremento Iterazioni)..."
-for data in facebook enron amazon youtube er_facebook er_enron er_amazon er_youtube ba_facebook ba_enron ba_amazon ba_youtube
+for data in facebook enron amazon youtube er_facebook ba_facebook ba_enron ba_amazon ba_youtube
 do
     echo "   -> Esecuzione su $data..."
     ./run_experiments_d $data
@@ -49,21 +49,21 @@ echo "🏃 7. Esecuzione Scalability Experiment (Doubling Nodi)..."
 echo ""
 echo "📊 8. Generazione di tutti i grafici Python..."
 echo "   -> Grafico Validazione Barabási-Albert..."
-cd scripts
-python3 plot_ba.py
-cd ..
+# cd scripts
+python3 scripts/plot_ba.py
+# cd ..
 
 echo "   -> Grafici NP-Hardness..."
 python3 scripts/plot_nphard.py
 
 echo "   -> Grafici Esperimenti Standard..."
-for data in facebook enron amazon youtube er_facebook er_enron er_amazon er_youtube ba_facebook ba_enron ba_amazon ba_youtube
+for data in facebook enron amazon youtube er_facebook ba_facebook ba_enron ba_amazon ba_youtube
 do
     python3 scripts/plot_exp.py $data
 done
 
 echo "   -> Grafici Doubling Experiment (Iterazioni)..."
-for data in facebook enron amazon youtube er_facebook er_enron er_amazon er_youtube ba_facebook ba_enron ba_amazon ba_youtube
+for data in facebook enron amazon youtube er_facebook ba_facebook ba_enron ba_amazon ba_youtube
 do
     python3 scripts/plot_doubling.py $data
 done

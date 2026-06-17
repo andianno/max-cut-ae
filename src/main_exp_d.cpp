@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
     } else if (dataset_name == "er_facebook") {
         G = generate_random_graph(4039, 0.0108);
     } else if (dataset_name == "er_enron") {
-        G = generate_random_graph(36692, 0.00027);
+        G = generate_random_graph(36692, 0.0000108);
     } else if (dataset_name == "er_amazon") {
         G = generate_random_graph(334863, 0.0000165);
     } else if (dataset_name == "er_youtube") {
@@ -57,7 +57,7 @@ int main(int argc, char *argv[])
 
     out_file << "Iterazioni,Algoritmo,Taglio,CPU_Time\n";
 
-    int iterations = 1024; 
+    int iterations = 128; 
     int current_iterations = 1;
     int best_greedy_overall = 0;
 

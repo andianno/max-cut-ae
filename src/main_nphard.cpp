@@ -44,7 +44,7 @@ int main() {
     cout << "N_Nodi,Topologia,Algo,Taglio,CPU_Time_sec" << endl;
 
     // Dimensioni piccolissime per l'Algoritmo Esatto
-    vector<int> sizes = {10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30}; 
+    vector<int> sizes = {10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28}; 
     
     // Parametri per Erdős-Rényi
     double density = 0.5; 

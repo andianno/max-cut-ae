@@ -73,7 +73,7 @@ int main(int argc, char* argv[]) {
     out_file << "Iterazioni,Algoritmo,Taglio,CPU_Time\n";
 
     // 4. LOGICA DI EARLY STOPPING (PAZIENZA)
-    int min_iterations = 50;
+    int min_iterations = 25;
     int current_iterations = 1; 
     int max_patience = 5;       
     int patience_counter = 0;
